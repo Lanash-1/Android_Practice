@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             val title: String = resources.getString(R.string.chooser)
 
             val chooser: Intent = Intent.createChooser(sendIntent, title)
-            startActivity(sendIntent)
+//            startActivity(sendIntent)
 
 // Verify the original intent will resolve to at least one activity
             if (sendIntent.resolveActivity(packageManager) != null) {

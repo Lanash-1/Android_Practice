@@ -33,6 +33,5 @@ class MainActivity2 : AppCompatActivity() {
             resultContract.launch(intent)
         }
 
-
     }
 }
