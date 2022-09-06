@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val clickButton = findViewById<Button>(R.id.button2)
+        val clickButton = findViewById<Button>(R.id.implicitIntent)
         clickButton.setOnClickListener {
             val intent = Intent().apply {
                 this.action = Intent.ACTION_VIEW
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val shareButton = findViewById<Button>(R.id.button3)
+        val shareButton = findViewById<Button>(R.id.share)
         shareButton.setOnClickListener {
             val sendIntent = Intent().apply {
                 action = Intent.ACTION_SEND
@@ -39,8 +39,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val passIntentValueBtn = findViewById<Button>(R.id.button)
-        val stat = Stat("Sachin", 100, "India", true)
+        val passIntentValueBtn = findViewById<Button>(R.id.passIntent)
+        val stat = Stat("Sachin", "Tendulkar", 100, "India", "Retired")
         passIntentValueBtn.setOnClickListener {
             val intent = Intent(this, MainActivity2::class.java).apply {
                 putExtra("STAT", stat)
@@ -48,14 +48,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-//        intentValueButton.setOnClickListener {
-//            val valuesIntent = Intent(this, MainActivity2::class.java).apply {
-//                putExtra("NAME", "Sachin")
-//                putExtra("CENTURIES", 100)
-//                putExtra("COUNTRY", "India")
-//                putExtra("IS_RETIRED", true)
-//            }
-//            startActivity(valuesIntent)
-//        }
+
+        val constraintBtn = findViewById<Button>(R.id.constraint)
+        constraintBtn.setOnClickListener {
+            val constraintIntent = Intent(this, ConstraintLayoutExample::class.java)
+            startActivity(constraintIntent)
+        }
+
+        val linearLayoutBtn = findViewById<Button>(R.id.linearLayoutExample)
+        linearLayoutBtn.setOnClickListener {
+            val linearIntent = Intent(this, LinearLayoutExample::class.java)
+            startActivity(linearIntent)
+        }
     }
 }

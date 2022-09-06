@@ -13,22 +13,33 @@
         android:layout_height="wrap_content"
         android:text="No Stats to display"
         android:textAlignment="viewStart"
-        android:textSize="40sp"
-        android:fontFamily="serif-monospace"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="30sp"
+        android:layout_margin="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.405" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/showStats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="216dp"
         android:text="show Stats"
+        app:layout_constraintBottom_toTopOf="@+id/add_stat_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.965" />
+
+    <Button
+        android:id="@+id/add_stat_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="ADD STAT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

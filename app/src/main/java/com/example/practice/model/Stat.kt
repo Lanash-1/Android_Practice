@@ -1,10 +1,12 @@
 package com.example.practice.model
 
+import android.text.Editable
 import java.io.Serializable
 
 data class Stat(
-    val name: String,
+    val firstName: String,
+    val lastName: String,
     val centuries: Int,
     val country: String,
-    val isRetired: Boolean
+    val status: String
 ): Serializable

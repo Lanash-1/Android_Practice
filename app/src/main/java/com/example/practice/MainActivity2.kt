@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.result.ActivityResult
@@ -33,5 +34,13 @@ class MainActivity2 : AppCompatActivity() {
             resultContract.launch(intent)
         }
 
+        val addStatBtn = findViewById<Button>(R.id.add_stat_btn)
+        addStatBtn.setOnClickListener {
+            val addStatIntent = Intent(this, LinearLayoutExample::class.java)
+            startActivity(addStatIntent)
+        }
+
     }
+
+
 }

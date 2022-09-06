@@ -14,7 +14,7 @@ class StatsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_stats)
 
         val stat = intent.getSerializableExtra("STAT") as Stat
-        val resultStat = "Name: ${stat.name}\nCountry: ${stat.country}\nCenturies: ${stat.centuries}\nis Retired: ${stat.isRetired}"
+        val resultStat = "Name: ${stat.firstName} ${stat.lastName}\nCountry: ${stat.country}\nCenturies: ${stat.centuries}\nStatus: ${stat.status}"
 
         findViewById<TextView>(R.id.textView2).apply {
             text = resultStat
