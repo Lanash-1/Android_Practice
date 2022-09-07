@@ -3,62 +3,59 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="#03203C"
-    android:paddingBottom="16dp"
     tools:context=".ConstraintLayoutExample">
 
-    <ImageView
-        android:id="@+id/profileImage"
-        android:layout_width="76dp"
-        android:layout_height="62dp"
-        android:layout_margin="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background" />
-
-    <TextView
-        android:id="@+id/name"
+    <Button
+        android:id="@+id/chatButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:text="Cristiano Ronaldo"
+        android:text="Chats"
         android:textColor="@color/white"
-        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/time"
-        app:layout_constraintStart_toEndOf="@+id/profileImage"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toStartOf="@+id/statusButton"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/message"
+    <Button
+        android:id="@+id/statusButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="16dp"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:text="Hey how are you hope you are fine. All the best for next match"
-        android:textColor="#CAD5E2"
-        android:textSize="14sp"
+        android:text="Status"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toStartOf="@+id/callsButton"
+        app:layout_constraintStart_toEndOf="@+id/chatButton"
+        app:layout_constraintTop_toTopOf="@+id/chatButton" />
+
+    <Button
+        android:id="@+id/callsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="Calls"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/statusButton"
+        app:layout_constraintTop_toTopOf="@+id/statusButton" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/constraint_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/name"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
-
-    <TextView
-        android:id="@+id/time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="3.11 pm"
-        android:textColor="#CAD5E2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.937"
-        app:layout_constraintStart_toEndOf="@+id/profileImage"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatButton"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
