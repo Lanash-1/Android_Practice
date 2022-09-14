@@ -55,9 +55,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(constraintIntent)
         }
 
-        val linearLayoutBtn = findViewById<Button>(R.id.linearLayoutExample)
-        linearLayoutBtn.setOnClickListener {
-            val linearIntent = Intent(this, LinearLayoutExample::class.java)
+        val relativeLayoutBtn = findViewById<Button>(R.id.relativeLayoutExample)
+        relativeLayoutBtn.setOnClickListener {
+            val linearIntent = Intent(this, RelativeLayoutExample::class.java)
             startActivity(linearIntent)
         }
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,12 +8,181 @@
     android:layout_height="match_parent"
     tools:context=".RelativeLayoutExample">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/fileImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@mipmap/ic_launcher" />
 
+    <TextView
+        android:id="@+id/fileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filename.ext"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/fileImage"
+        android:layout_centerHorizontal="true"
+        />
 
+    <TextView
+        android:id="@+id/locationTxt"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Location: "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:textStyle="bold"
+        android:layout_below="@id/fileName"
+        />
 
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="local storage"
+        android:textSize="16sp"
+        android:layout_below="@id/fileName"
+        android:layout_toRightOf="@id/locationTxt"
+        android:layout_marginTop="16dp"
+        />
 
-    </RelativeLayout>
-</ScrollView>
+    <TextView
+        android:id="@+id/sizeTxt"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Size: "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:textStyle="bold"
+        android:layout_below="@id/locationTxt"
+        />
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="223 KB"
+        android:textSize="16sp"
+        android:layout_below="@id/location"
+        android:layout_toRightOf="@id/sizeTxt"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        />
+
+    <TextView
+        android:id="@+id/dateTxt"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Date Created: "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginLeft="16dp"
+        android:textStyle="bold"
+        android:layout_below="@id/sizeTxt"
+        />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12/12/12"
+        android:textSize="16sp"
+        android:layout_below="@id/sizeTxt"
+        android:layout_toRightOf="@id/dateTxt"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginEnd="16dp"
+        />
+
+    <TextView
+        android:id="@+id/hiddenTxt"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Hidden: "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:textStyle="bold"
+        android:layout_below="@id/dateTxt"
+        />
+
+    <TextView
+        android:id="@+id/hidden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:textSize="16sp"
+        android:layout_below="@id/date"
+        android:layout_toRightOf="@id/hiddenTxt"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginEnd="16dp"
+        />
+
+    <TextView
+        android:id="@+id/readableTxt"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Readable"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginLeft="16dp"
+        android:textStyle="bold"
+        android:layout_below="@id/hiddenTxt"
+        />
+
+    <TextView
+        android:id="@+id/readable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:textSize="16sp"
+        android:layout_below="@id/hidden"
+        android:layout_toRightOf="@id/locationTxt"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginEnd="16dp"
+        />
+
+    <TextView
+        android:id="@+id/writableTxt"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Writable: "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginLeft="16dp"
+        android:textStyle="bold"
+        android:layout_below="@id/readableTxt"
+        />
+
+    <TextView
+        android:id="@+id/writable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:textSize="16sp"
+        android:layout_below="@id/readable"
+        android:layout_toRightOf="@id/writableTxt"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginEnd="16dp"
+        />
+
+</RelativeLayout>
