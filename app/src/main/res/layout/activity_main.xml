@@ -58,10 +58,21 @@
         android:id="@+id/relativeLayoutExample"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Relative layout Example"
         android:layout_margin="16dp"
+        android:text="Relative layout Example"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraint" />
+
+    <Button
+        android:id="@+id/formUiExample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="form Example"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutExample" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

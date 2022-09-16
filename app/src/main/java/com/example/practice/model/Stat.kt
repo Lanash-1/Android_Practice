@@ -1,6 +1,5 @@
 package com.example.practice.model
 
-import android.text.Editable
 import java.io.Serializable
 
 data class Stat(

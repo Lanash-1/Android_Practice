@@ -1,13 +1,27 @@
 package com.example.practice
 
+import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import com.example.practice.model.Credentials
 import com.example.practice.model.Stat
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var credentials: Credentials
+
+    val resultContract = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult? ->
+        if(result?.resultCode == Activity.RESULT_OK){
+            credentials = result.data?.getSerializableExtra("CREDENTIALS") as Credentials
+        }
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -59,6 +73,12 @@ class MainActivity : AppCompatActivity() {
         relativeLayoutBtn.setOnClickListener {
             val linearIntent = Intent(this, RelativeLayoutExample::class.java)
             startActivity(linearIntent)
+        }
+
+        val formBtn = findViewById<Button>(R.id.formUiExample)
+        formBtn.setOnClickListener {
+            val formIntent = Intent(this, TextInputLayoutExample::class.java)
+            resultContract.launch(formIntent)
         }
     }
 }
