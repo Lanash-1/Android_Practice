@@ -6,11 +6,13 @@ import android.widget.Button
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
+import com.example.practice.databinding.ActivityConstraintLayoutExampleBinding
 
 class ConstraintLayoutExample : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_constraint_layout_example)
+        val binding = ActivityConstraintLayoutExampleBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         if(savedInstanceState == null){
             supportFragmentManager.commit {
                 add<ChatsFragment>(R.id.constraint_fragment)
