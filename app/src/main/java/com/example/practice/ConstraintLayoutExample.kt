@@ -22,9 +22,7 @@ class ConstraintLayoutExample : AppCompatActivity() {
         val chatButton = findViewById<Button>(R.id.chatButton)
         chatButton.setOnClickListener {
             supportFragmentManager.commit {
-//                addToBackStack(null)
                 replace<ChatsFragment>(R.id.constraint_fragment)
-//                addToBackStack(null)
             }
         }
 
